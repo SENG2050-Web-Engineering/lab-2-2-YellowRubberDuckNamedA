@@ -8,11 +8,13 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class SimpleMessage {
 
-public class SimpleMessage extends HttpServlet {
-protected void doGet(HttpServletRequest req, HttpServletResponse resp)
-throws ServletException, IOException {
-PrintWriter out = resp.getWriter();
-out.println("Put a simple message here");
-}
+public class SimpleMessage extends HttpServlet 
+{
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    throws ServletException, IOException 
+    {
+        PrintWriter out = resp.getWriter();
+        out.println("Put a simple message here");
+    }
 }
 }
