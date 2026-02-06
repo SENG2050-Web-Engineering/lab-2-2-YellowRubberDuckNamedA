@@ -1,3 +1,8 @@
+package seng2050.lab2;
+
+import java.io.File;
+
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -6,7 +11,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 
-public class SimpleMessage {
 
 public class SimpleMessage extends HttpServlet 
 {
@@ -16,5 +20,4 @@ public class SimpleMessage extends HttpServlet
         PrintWriter out = resp.getWriter();
         out.println("Put a simple message here");
     }
-}
 }
