@@ -38,7 +38,9 @@ public class Main {
     // Map the servlet
     ctx.addServletMappingDecoded("/HelloWorld", "HelloWorldServlet");
 
-    
+    // Add and map the servlet
+    tomcat.addServlet("", "SimpleMessage", new SimpleMessage());
+    ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
 
     // Start Tomcat
     try {
@@ -50,9 +52,7 @@ public class Main {
       e.printStackTrace();
     }
 
-        // Add and map the servlet
-    tomcat.addServlet("", "SimpleMessage", new SimpleMessage());
-    ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
+ 
 
   }
 }
