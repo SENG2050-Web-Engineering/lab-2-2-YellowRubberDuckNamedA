@@ -23,14 +23,15 @@ public class GreetingsServlet extends HttpServlet {
         out.println("\t<h1> Coding is interesting, lets see if this works</h1>");
         
 
-        String value = request.getParameter("FirstName");
+        String value = req.getParameter("FirstName");
+        out.println("\t<h4> I am John" + value + "</h4>");
         if (value == null)
         {
         // the parameter wasn’t passed
         }
         
-        else if (value == ("someValue"))
-            out.println("\t<h4> I am John</h4>");
+        else if (value == ("somevalue"))
+            out.println("\t<h4> I am John" + value + "</h4>");
         {
         // the parameter was an expected value
         // sometimes you may like to check against a regex
