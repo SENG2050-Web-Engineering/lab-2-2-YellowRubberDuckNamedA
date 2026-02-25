@@ -10,30 +10,23 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-public class generateValidHTML extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+public class LoginServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
     throws ServletException, IOException {
-    
+
         resp.setContentType("text/html");
 
-        String firstName = req.getParameter("first name");
-        String lastName = req.getParameter("last name");
 
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
 
-        if (firstName == null || firstName.isEmpty()) {
-            firstName = "Guest";
-            lastName = "";
-        }
-
+        
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head> <title> Hello </title> </head>");
         out.println("<body>");
-        out.println("\t<h1> Coding sucks, in this essay i will...</h1>");
-        out.println("\t<h2> Greetings " + firstName + " " + lastName + "</h2>");
         out.println("</body>");
         out.println("</html>");
-
-    }
+            }
 }
