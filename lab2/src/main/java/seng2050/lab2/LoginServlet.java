@@ -11,14 +11,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class LoginServlet extends HttpServlet {
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
     throws ServletException, IOException {
 
         resp.setContentType("text/html");
-
-
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
 
         
         PrintWriter out = resp.getWriter();
@@ -26,6 +22,11 @@ public class LoginServlet extends HttpServlet {
         out.println("<html>");
         out.println("<head> <title> Hello </title> </head>");
         out.println("<body>");
+        out.println("<form action=\"/HelloWorldServlet\" method=\"POST\">");
+        out.println("Username: <input type=\"text\" username=\"username\" /> <br/>");
+        out.println("Password: <input type=\"text\" password=\"password\" /> <br/>");
+        out.println("<input type='submit'/>");
+        out.println("</form>");
         out.println("</body>");
         out.println("</html>");
             }

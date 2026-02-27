@@ -9,9 +9,12 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class HelloWorldServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
     throws ServletException, IOException {
 
+
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
         PrintWriter out = resp.getWriter();
         out.println("<!DOCTYPE html>");
         out.println("<html>");

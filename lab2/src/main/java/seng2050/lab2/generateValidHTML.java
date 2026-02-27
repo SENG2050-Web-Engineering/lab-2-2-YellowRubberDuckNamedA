@@ -26,12 +26,15 @@ public class generateValidHTML extends HttpServlet {
         }
 
         PrintWriter out = resp.getWriter();
-        out.println("<!DOCTYPE html>");
+      out.println("<!DOCTYPE html>");
         out.println("<html>");
         out.println("<head> <title> Hello </title> </head>");
         out.println("<body>");
-        out.println("\t<h1> Coding sucks, in this essay i will...</h1>");
-        out.println("\t<h2> Greetings " + firstName + " " + lastName + "</h2>");
+        out.println("<form action=\"/HelloWorldServlet\" method=\"POST\">");
+        out.println("Name: <input type=\"text\" name=\"name\" /> <br/>");
+        out.println("Age: <input type=\"text\" age=\"age\" /> <br/>");
+        out.println("<input type='submit'/>");
+        out.println("</form>");
         out.println("</body>");
         out.println("</html>");
 

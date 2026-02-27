@@ -43,8 +43,8 @@ public class Main {
     ctx.addServletMappingDecoded("/SimpleMessage", "SimpleMessage");
 
 // Add and map the servlet
-    tomcat.addServlet("", "GreetingsServlet", new LoginServlet());
-    ctx.addServletMappingDecoded("/GreetingsServlet", "GreetingsServlet");
+    tomcat.addServlet("", "LoginServlet", new LoginServlet());
+    ctx.addServletMappingDecoded("/LoginServlet", "LoginServlet");
 
     // Add and map the servlet
     tomcat.addServlet("", "generateValidHTML", new generateValidHTML());
